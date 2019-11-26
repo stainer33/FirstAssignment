@@ -1,95 +1,102 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fillViewport="false">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hotel Payment System"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="40sp"></TextView>
+        android:orientation="vertical">
 
-    <TextView
-        style="@style/common"
-        android:text="Checkin Date"></TextView>
-
-    <EditText
-        android:id="@+id/CheckIn"
-        style="@style/common"
-        android:editable="false"></EditText>
-
-    <TextView
-        style="@style/common"
-        android:text="Checkout Date"></TextView>
-
-    <EditText
-        android:id="@+id/CheckOut"
-        style="@style/common"
-        android:editable="false"></EditText>
-
-    <TextView
-        style="@style/common"
-        android:text="Select room type"></TextView>
-
-
-    <Spinner
-        android:id="@+id/RoomType"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"></Spinner>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Payment System"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="40sp"></TextView>
 
         <TextView
             style="@style/common"
-            android:layout_weight="1"
-            android:text="Adult"></TextView>
+            android:text="Checkin Date"></TextView>
+
+        <EditText
+            android:id="@+id/CheckIn"
+            style="@style/common"
+            android:editable="false"></EditText>
 
         <TextView
             style="@style/common"
-            android:layout_weight="1"
-            android:text="Children"></TextView>
+            android:text="Checkout Date"></TextView>
+
+        <EditText
+            android:id="@+id/CheckOut"
+            style="@style/common"
+            android:editable="false"></EditText>
 
         <TextView
             style="@style/common"
-            android:layout_weight="1"
-            android:text="Rooms"></TextView>
+            android:text="Select room type"></TextView>
+
+
+        <Spinner
+            android:id="@+id/RoomType"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"></Spinner>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/common"
+                android:layout_weight="1"
+                android:text="Adult"></TextView>
+
+            <TextView
+                style="@style/common"
+                android:layout_weight="1"
+                android:text="Children"></TextView>
+
+            <TextView
+                style="@style/common"
+                android:layout_weight="1"
+                android:text="Rooms"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/Adult"
+                style="@style/common"
+                android:layout_weight="1"
+                android:inputType="number"></EditText>
+
+            <EditText
+                android:id="@+id/Children"
+                style="@style/common"
+                android:layout_weight="1"
+                android:inputType="number"></EditText>
+
+            <EditText
+                android:id="@+id/Room"
+                style="@style/common"
+                android:layout_weight="1"
+                android:inputType="number"></EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Calculate"
+            style="@style/common"
+            android:background="@android:color/holo_red_light"
+            android:text="Calculate"
+            android:textColor="@android:color/white"></Button>
+
+        <TextView
+            android:id="@+id/Result"
+            style="@style/common"></TextView>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/Adult"
-            style="@style/common"
-            android:layout_weight="1"
-            android:inputType="number"></EditText>
-
-        <EditText
-            android:id="@+id/Children"
-            style="@style/common"
-            android:layout_weight="1"
-            android:inputType="number"></EditText>
-
-        <EditText
-            android:id="@+id/Room"
-            style="@style/common"
-            android:layout_weight="1"
-            android:inputType="number"></EditText>
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/Calculate"
-        style="@style/common"
-        android:background="@android:color/holo_red_light"
-        android:text="Calculate"
-        android:textColor="@android:color/white"></Button>
-
-    <TextView
-        android:id="@+id/Result"
-        style="@style/common"></TextView>
-</LinearLayout>
+</ScrollView>
